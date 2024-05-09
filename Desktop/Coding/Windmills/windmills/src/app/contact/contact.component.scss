@@ -1,0 +1,78 @@
+.container {
+  color: white;
+  padding: max(calc(1vw + 1vh), 4px);
+}
+.title {
+  font-weight: 250;
+}
+.errorMessage {
+  font-size: max(calc(0.8vw + 0.8vh), 10px);
+  font-weight: 150;
+  padding: max(calc(0.1vw + 0.1vh), 4px);
+}
+.label {
+  font-size: max(calc(0.8vw + 0.8vh), 10px);
+  font-weight: 150;
+  padding: max(calc(0.1vw + 0.1vh), 4px);
+}
+input,
+textarea {
+  all: unset;
+  color: white;
+  font-size: max(calc(0.8vw + 0.8vh), 10px);
+  font-weight: 150;
+  padding: max(calc(0.1vw + 0.1vh), 4px);
+  border-radius: 1vh;
+  background-color: rgba(255, 255, 255, 0.076);
+  text-align: center;
+  padding: 0.5em;
+}
+input::placeholder,
+textarea::placeholder {
+  text-align: center;
+  color: white;
+  font-weight: 100;
+  font-size: max(calc(0.8vw + 0.8vh), 16px);
+}
+.message {
+  width: 40vw;
+}
+p {
+  margin: 0;
+}
+.field {
+  padding: max(calc(0.1vw + 0.1vh), 4px);
+}
+.button-div {
+  padding: max(calc(0.1vw + 0.1vh), 4px);
+}
+button {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.076);
+  transition: background-color 0.2s cubic-bezier(0.2, 0, 0.2, 1);
+}
+button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(240, 248, 255, 0.174);
+}
+button:focus {
+  outline: none !important;
+  box-shadow: none;
+}
+.telephone-icon {
+  width: 1em;
+}
+.telephone {
+  text-decoration: none;
+  font-size: max(calc(1vw + 1vh), 20px);
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+  -webkit-transition: text-shadow 0.2s ease-in-out;
+  -moz-transition: text-shadow 0.2s ease-in-out;
+  -ms-transition: text-shadow 0.2s ease-in-out;
+  -o-transition: text-shadow 0.2s ease-in-out;
+  transition: text-shadow 0.2s ease-in-out;
+}
+.telephone:hover {
+  text-shadow: rgba(208, 255, 211, 0.9) 0px 0px 10px;
+}

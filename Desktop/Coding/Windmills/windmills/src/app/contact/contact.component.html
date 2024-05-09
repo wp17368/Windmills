@@ -1,0 +1,89 @@
+<div class="container box shadow" [hidden]="submitted">
+  <div class="row d-flex justify-content-center">
+    <h2 class="title">Contact Us!</h2>
+  </div>
+  <div class="row d-flex text-center justify-content-center">
+    <div class="col mb-2">
+      <p>
+        <a class="telephone" href="tel:+48606800546"
+          ><img class="telephone-icon" src="assets/telephone-icon.png" /> +48
+          572 943 942</a
+        >
+      </p>
+      <p>
+        <a href="mailto:piatywymiar74@gmail.com">✉️</a>
+        piatywymiar74&#64;gmail.com
+      </p>
+      <h3 class="title mt-4">Or send us a direct message:</h3>
+    </div>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <form #contactForm="ngForm" (ngSubmit)="sendData()">
+      <div class="field d-flex justify-content-center">
+        <input
+          type="text"
+          name="name"
+          class="input"
+          placeholder="Name"
+          [(ngModel)]="name"
+          #nameInput="ngModel"
+          required
+        />
+      </div>
+      <div
+        class="errorMessage d-flex justify-content-center"
+        *ngIf="nameInput.invalid && nameInput.touched"
+      >
+        <p>Please, fill out this field.</p>
+      </div>
+      <div class="field d-flex justify-content-center">
+        <input
+          type="email"
+          name="email"
+          class="input"
+          placeholder="Email"
+          [(ngModel)]="email"
+          #emailInput="ngModel"
+          required
+          email
+        />
+      </div>
+      <div
+        class="errorMessage d-flex justify-content-center"
+        *ngIf="emailInput.invalid && emailInput.touched"
+      >
+        <p>Invalid email address.</p>
+      </div>
+
+      <div class="field d-flex justify-content-center">
+        <textarea
+          class="message"
+          type="text"
+          name="message"
+          placeholder="Your message:"
+          required
+          [(ngModel)]="message"
+          #messageInput="ngModel"
+        ></textarea>
+      </div>
+      <div
+        class="errorMessage d-flex justify-content-center"
+        *ngIf="messageInput.invalid && messageInput.touched"
+      >
+        <p>Please, fill out this field.</p>
+      </div>
+
+      <div class="button-div d-flex justify-content-center">
+        <button type="submit" [disabled]="!contactForm.valid">Send</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="container blur box shadow" [hidden]="!submitted">
+  <div class="row d-flex justify-content-center">
+    <h2 class="title text-center">Thanks for getting in touch!</h2>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <p>We will soon respond to your message.</p>
+  </div>
+</div>
