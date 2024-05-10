@@ -1,0 +1,107 @@
+<div class="container-fluid">
+  <!-- Desktop display -->
+  <div *ngIf="!this.responsiveDisplay" #project class="container frame">
+    <div
+      *ngFor="let project of projects; let i = index"
+      [ngClass]="show.includes(project.id) ? 'show' : 'hide'"
+      class="row align-items-center project-card"
+    >
+      <div *ngIf="i % 2 != 0" class="col d-none d-lg-block text-right">
+        <img class="poject-image" src="{{ project.imgUrl }}" />
+      </div>
+      <div
+        [ngClass]="i % 2 != 0 ? 'text-left' : 'text-right'"
+        class="col project-info"
+      >
+        <div class="row">
+          <div class="col">
+            <h1 *ngIf="i % 2 != 0" class="d-inline">{{ project.title }}</h1>
+            <div class="d-inline">
+              <a href="{{ project.liveUrl }}" target="_blank">
+                <button class="ml-2 d-inline link-button">live</button></a
+              >
+              <a href="{{ project.codeUrl }}" target="_blank"
+                ><button
+                  [class]="project.codeUrl === 'none' ? 'hide' : 'show'"
+                  [class]="i % 2 != 0 ? 'ml-2' : 'mr-2'"
+                  class="ml-2 link-button"
+                >
+                  code
+                </button>
+              </a>
+            </div>
+            <h1 *ngIf="i % 2 == 0" class="d-inline">{{ project.title }}</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p class="text-left description">
+              {{ project.description }}
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <p *ngFor="let technology of project.technology" class="tag">
+              {{ technology }}
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col d-lg-none text-right">
+            <img class="poject-image-small" src="{{ project.imgUrl }}" />
+          </div>
+        </div>
+      </div>
+      <div *ngIf="i % 2 == 0" class="col d-none d-lg-block text-left">
+        <img class="poject-image" src="{{ project.imgUrl }}" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile display -->
+  <div *ngIf="this.responsiveDisplay" #project class="container frame">
+    <div
+      *ngFor="let project of projects; let i = index"
+      [ngClass]="show.includes(project.id) ? 'show' : 'hide'"
+      class="row align-items-center project-card"
+    >
+      <div class="col">
+        <div class="row">
+          <h1 class="text-center">{{ project.title }}</h1>
+        </div>
+        <div class="row">
+          <div class="col text-center">
+            <a href="{{ project.liveUrl }}" target="_blank">
+              <button class="ml-1 mr-1 d-inline link-button">live</button></a
+            >
+            <a href="{{ project.codeUrl }}" target="_blank"
+              ><button
+                [class]="project.codeUrl === 'none' ? 'hide' : 'show'"
+                class="ml-1 mr-1 link-button"
+              >
+                code
+              </button>
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <img class="poject-image-small" src="{{ project.imgUrl }}" />
+        </div>
+
+        <div class="row">
+          <p class="text-center description">
+            {{ project.description }}
+          </p>
+        </div>
+        <div class="row">
+          <div class="col p-0 text-center">
+            <p *ngFor="let technology of project.technology" class="tag">
+              {{ technology }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

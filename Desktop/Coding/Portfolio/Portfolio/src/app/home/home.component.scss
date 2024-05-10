@@ -1,0 +1,79 @@
+p {
+  margin: 0;
+  color: rgb(80, 80, 80);
+}
+.row {
+  height: 100vh;
+  transition: 700ms;
+}
+
+.profile-img {
+  height: 33vh;
+  border-radius: 100px;
+}
+h1,
+h2 {
+  font-family: "OJ Customs";
+  z-index: 1;
+  width: 33vw;
+  color: rgb(103, 53, 53);
+  transition: 300ms;
+}
+
+.drake-font {
+  font-family: "OJ Customs";
+}
+.cursor {
+  display: none;
+  z-index: 0;
+  background-color: rgba(206, 192, 178, 0);
+  border-style: none;
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: 0px 0px 15em 100px rgba(255, 255, 255, 0.363);
+  animation: colors 5s infinite;
+  @keyframes colors {
+    0% {
+      box-shadow: 0px 0px 20px 5px rgb(255, 255, 255, 0.363);
+    }
+    50% {
+      box-shadow: 0px 0px 18em 10em rgb(255, 255, 255, 0.363);
+    }
+    100% {
+      box-shadow: 0px 0px 20px 5px rgb(255, 255, 255, 0.363);
+    }
+  }
+  transition: opacity 300ms;
+}
+.cursor:before {
+  content: "";
+  position: absolute;
+  background: rgba(206, 192, 178, 0);
+  width: 50px;
+  height: 50px;
+  opacity: 0.2;
+  transform: translate(-30%, -30%);
+  border-radius: 50%;
+}
+@media (max-width: 1100px) and (min-width: 1px) {
+  h1,
+  h2 {
+    font-size: 2rem;
+    z-index: 1;
+    width: 33vw;
+    color: wheat;
+  }
+}
+
+@media (max-width: 950px) and (min-width: 1px) {
+  h1,
+  h2 {
+    font-size: 1.4rem;
+    z-index: 1;
+    width: 33vw;
+    color: wheat;
+  }
+}

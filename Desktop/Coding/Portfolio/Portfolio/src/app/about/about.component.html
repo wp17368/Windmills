@@ -1,0 +1,71 @@
+<div class="container-fluid">
+  <div *ngIf="!this.responsiveDisplay" #container class="container">
+    <div class="row text-center">
+      <div class="col d-flex align-items-end">
+        <div class="profile"></div>
+      </div>
+    </div>
+    <div class="row align-items-bottom text-center">
+      <div class="col">
+        <h1 class="d-inline">About me</h1>
+        <p>Hi! I am a frontend developer based in Poland.</p>
+        <p>
+          Web development has been my hobby since I build my first theme for
+          Tumblr in 2014. The ones free of charge weren't emo enough.
+        </p>
+        <p>
+          While web development is widely-available to study and practice,
+          another one of my passions - neuroscience - is not. I did my
+          Bachelor's in the latter, while programming on the side.
+        </p>
+        <p>
+          My projects are versatile, as I develop multiple skills at a time.
+        </p>
+        <p>The technologies I am most fluent in are:</p>
+        <p class="tag">Javascript</p>
+        <p class="tag">Angular</p>
+        <p class="tag">Typescript</p>
+        <p class="tag">CSS</p>
+        <p class="tag">HTML</p>
+        <p class="tag">GIT</p>
+        <p class="tag">SQL</p>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="this.responsiveDisplay" #container class="container">
+    <div class="row">
+      <div class="col">
+        <div class="row align-items-center text-right">
+          <div class="col d-flex justify-content-end">
+            <div class="profile"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="row align-items-center text-left">
+          <div class="col">
+            <h1>About me</h1>
+            <p>
+              Hi! I am a frontend developer based in Poland.<br />
+              Web development has been my hobby since I build my first theme for
+              Tumblr in 2014. The ones free of charge weren't emo enough.<br /><br />While
+              web development is widely-available to study and practice, another
+              one of my passions - neuroscience - is not. I did my Bachelor's in
+              the latter, while programming on the side. <br /><br />My projects
+              are versatile, as I develop multiple skills at a time.<br />
+              The technologies I am most fluent in are:
+            </p>
+            <p class="tag">Javascript</p>
+            <p class="tag">Angular</p>
+            <p class="tag">Typescript</p>
+            <p class="tag">CSS</p>
+            <p class="tag">HTML</p>
+            <p class="tag">GIT</p>
+            <p class="tag">SQL</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
