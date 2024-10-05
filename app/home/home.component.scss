@@ -1,0 +1,29 @@
+.container-fluid {
+  font-weight: 100;
+  margin-top: 5vh;
+  color: rgb(255, 255, 255);
+  width: 55vw;
+}
+h2 {
+  color: white;
+  font-weight: 250;
+  padding-bottom: 0.3em;
+  font-size: max(min(calc(1.3vw + 1.3vh), 30px), 18px);
+}
+h4 {
+  font-weight: 250;
+}
+.blur {
+  border-radius: 1vh;
+}
+p {
+  padding-left: 1em;
+  padding-right: 1em;
+  margin: 0;
+}
+img {
+  border-radius: 1vh;
+}
+.image {
+  padding: 0;
+}

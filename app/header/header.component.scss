@@ -1,0 +1,21 @@
+.jumbotron {
+  justify-content: center;
+  align-items: center;
+  height: 35vh;
+  margin: 0;
+  background: none;
+  color: rgb(255, 255, 255);
+  text-shadow: 3px -1px 6px rgba(66, 68, 90, 1);
+}
+p {
+  font-weight: 200;
+  margin: 0;
+  font-size: 5vh;
+}
+h1 {
+  margin: 0;
+  font-weight: 350;
+  font-size: 8vh;
+  font-size: min(calc(4vw + 4vh), 20px);
+  font-size: max(calc(3vw + 3vh), 14px);
+}
